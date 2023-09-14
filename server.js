@@ -2,11 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+
 const app = express();
 const port = process.env.PORT || 3000;
 
-const mongoURI = 'mongodb+srv://ivanmizz:lameck46@cluster0.kpysjfp.mongodb.net/tasktwo?retryWrites=true&w=majority';
-
+const mongoURI = process.env.MONGO_URI;
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB Atlas');
