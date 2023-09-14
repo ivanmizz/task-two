@@ -5,7 +5,16 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost/rest-api-person', { useNewUrlParser: true, useUnifiedTopology: true });
+const mongoURI = 'mongodb+srv://ivanmizz:lameck46@cluster0.kpysjfp.mongodb.net/tasktwo?retryWrites=true&w=majority';
+
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('Connected to MongoDB Atlas');
+  })
+  .catch(err => {
+    console.error('Error connecting to MongoDB Atlas:', err);
+  });
+
 app.use(bodyParser.json());
 
 const Person = require('./models/person');
@@ -32,8 +41,10 @@ app.get('/api', async (req, res) => {
   }
 });
 
+
+
 // Update a person by ID
-app.put('/api/:user_id', async (req, res) => {
+app.put('/api/user_id', async (req, res) => {
   try {
     const person = await Person.findByIdAndUpdate(req.params.user_id, req.body, { new: true });
     res.json(person);
@@ -44,7 +55,7 @@ app.put('/api/:user_id', async (req, res) => {
 
 
 // Patch (partially update) a person by ID
-app.patch('/api/:user_id', async (req, res) => {
+app.patch('/api/user_id', async (req, res) => {
     try {
       const person = await Person.findById(req.params.user_id);
   
@@ -68,7 +79,7 @@ app.patch('/api/:user_id', async (req, res) => {
   
 
 // Delete a person by ID
-app.delete('/api/:user_id', async (req, res) => {
+app.delete('/api/user_id', async (req, res) => {
   try {
     await Person.findByIdAndDelete(req.params.id);
     res.json({ message: 'Person deleted successfully' });
