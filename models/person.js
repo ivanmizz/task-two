@@ -1,9 +1,16 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const personSchema = new mongoose.Schema({
-  name: String,
-  user_id: Number,
+
+  name: {
+    required: true,
+    type: String,
+  },
+  user_id: {
+    required: true,
+    type: Number,
+  },
   // Add more fields as needed
 });
 
-module.exports = mongoose.model('Person', personSchema);
+module.exports = mongoose.model("Person", personSchema);
