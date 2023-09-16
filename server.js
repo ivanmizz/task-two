@@ -34,7 +34,7 @@ app.post('/api', async (req, res) => {
 });
 
 // Get all people or filter by name
-app.get('/api/user_id', async (req, res) => {
+app.get('/api/:user_id', async (req, res) => {
   try {
     const query = req.query.name ? { name: req.query.name } : {};
     const people = await Person.find(query);
@@ -45,7 +45,7 @@ app.get('/api/user_id', async (req, res) => {
 });
 
 // Update a person by ID
-app.put("/api/user_id", async (req, res) => {
+app.put("/api/:user_id", async (req, res) => {
   try {
     const person = await Person.findByIdAndUpdate(
       req.params.user_id,
@@ -59,7 +59,7 @@ app.put("/api/user_id", async (req, res) => {
 });
 
 // Patch (partially update) a person by ID
-app.patch("/api/user_id", async (req, res) => {
+app.patch("/api/:user_id", async (req, res) => {
   try {
     const person = await Person.findById(req.params.user_id);
 
@@ -82,7 +82,7 @@ app.patch("/api/user_id", async (req, res) => {
 });
 
 // Delete a person by ID
-app.delete("/api/user_id", async (req, res) => {
+app.delete("/api/:user_id", async (req, res) => {
   try {
     await Person.findByIdAndDelete(req.params.id);
     res.json({ message: "Person deleted successfully" });
