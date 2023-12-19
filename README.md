@@ -1,15 +1,15 @@
-A REST CRUD api
+#A REST CRUD api
 
-Install ThunderClient:
+**Install ThunderClient:**
 If you haven't already, install the ThunderClient extension in Visual Studio Code. You can download it from the Visual Studio Code Marketplace.
 
-Create a Workspace:
+**Create a Workspace:**
 Open your API workspace in Visual Studio Code.
 
-Create Requests:
+**Create Requests:**
 In ThunderClient, you can create separate requests for each API endpoint (e.g., POST, GET, PUT, DELETE). To create a request:
 
-Click on the ThunderClient icon in the sidebar.
+##Click on the ThunderClient icon in the sidebar.
 Click the "New Request" button or right-click on a folder and select "New Request."
 Give your request a name and choose the HTTP method (e.g., POST, GET) from the dropdown menu.
 Configure Requests:
@@ -28,8 +28,8 @@ Modify the request parameters, headers, and request body as needed to test vario
 
 Base URL: https://task-twoo.onrender.com/api/
 
-Endpoints
-Create a New Record
+**Endpoints**
+__Create a New Record__
 URL: /
 
 Method: POST
@@ -37,11 +37,9 @@ Method: POST
 Description: Create a new record in the database.
 
 
-Creating comprehensive API documentation typically involves using tools and practices designed for that purpose, such as API documentation generators or OpenAPI specifications. However, I can provide you with a basic example of how you might manually document your API operations for your Node.js application. Note that this is a simplified example and doesn't provide the full features of professional API documentation tools.
 
-Here's a basic documentation template for your Node.js application API:
 
-Task-Twoo API Documentation
+##Task-Twoo API Documentation
 Base URL: https://task-twoo.onrender.com/api/
 
 Endpoints
