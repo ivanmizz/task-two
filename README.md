@@ -1,4 +1,4 @@
-#A REST CRUD api
+# A REST CRUD api
 
 **Install ThunderClient:**
 If you haven't already, install the ThunderClient extension in Visual Studio Code. You can download it from the Visual Studio Code Marketplace.
@@ -9,7 +9,7 @@ Open your API workspace in Visual Studio Code.
 **Create Requests:**
 In ThunderClient, you can create separate requests for each API endpoint (e.g., POST, GET, PUT, DELETE). To create a request:
 
-##Click on the ThunderClient icon in the sidebar.
+## Click on the ThunderClient icon in the sidebar.
 Click the "New Request" button or right-click on a folder and select "New Request."
 Give your request a name and choose the HTTP method (e.g., POST, GET) from the dropdown menu.
 Configure Requests:
@@ -28,7 +28,7 @@ Modify the request parameters, headers, and request body as needed to test vario
 
 Base URL: https://task-twoo.onrender.com/api/
 
-**Endpoints**
+## Endpoints
 __Create a New Record__
 URL: /
 
@@ -39,7 +39,7 @@ Description: Create a new record in the database.
 
 
 
-##Task-Twoo API Documentation
+## Task-Two API Documentation
 Base URL: https://task-twoo.onrender.com/api/
 
 Endpoints
